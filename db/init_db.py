@@ -11,7 +11,7 @@ DB_PORT = int(os.getenv("DB_PORT", "3306"))
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")  
 
-DB_NAME = "travel"
+DB_NAME = "taipei-day-tour"
 TABLE_NAME = "spot"
 
 def connect_server():
@@ -75,7 +75,11 @@ def create_table():
 
     
 def insert_data():
-    with open ("data/taipei-attractions.json", "r", encoding="utf-8") as f:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    base_dir = os.path.dirname(current_dir)
+    json_path = os.path.join(base_dir, "data", "taipei-attractions.json")
+
+    with open (json_path, "r", encoding="utf-8") as f:
         row_data = json.load(f)
     
     data = row_data["result"]["results"]
