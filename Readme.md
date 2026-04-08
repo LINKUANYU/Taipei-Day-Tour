@@ -2,7 +2,7 @@
 
 A travel e-commerce platform built on a decoupled architecture, featuring a comprehensive shopping and checkout flow.
 
-[Live Demo](peidaytour.linkuankuan.com) | [API Documentation](peidaytour.linkuankuan.com/docs)
+[Live Demo](https://taipeidaytour.linkuankuan.com/) | [API Documentation](https://taipeidaytour.linkuankuan.com/docs)
 
 ## 🌟 Features
 
