@@ -19,6 +19,8 @@ A travel e-commerce platform built on a decoupled architecture, featuring a comp
 * **Infrastructure:** Docker, AWS (EC2 / RDS), Nginx
 * **Third-Party API:** TapPay API
 
+## ERD
+
 ```mermaid
 
 erDiagram
