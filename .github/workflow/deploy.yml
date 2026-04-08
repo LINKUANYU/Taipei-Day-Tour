@@ -1,0 +1,35 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # GitHub 會開一台虛擬機來跑這個任務
+    
+    steps:
+      - name: SSH into EC2 and Deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          # 下方就是 GitHub 連進 EC2 後要執行的指令
+          script: |
+            # 1. 進入專案資料夾
+            cd ~/Taipei-Day-Tour
+            
+            # 2. 強制拉取最新程式碼 (避免衝突)
+            git fetch --all
+            git reset --hard origin/main
+            
+            # 3. 重新打包並重啟 Docker
+            sudo docker compose up -d --build
+
+            # 4. 強制重啟 Nginx，讓它重新抓取前後端容器的新 IP
+            sudo docker compose restart nginx
+            
+            # 5. 清理沒有在使用的 Docker 垃圾，避免 EC2 硬碟爆滿
+            sudo docker system prune -f
