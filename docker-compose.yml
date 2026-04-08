@@ -8,10 +8,6 @@ services:
     env_file:
       - .env
     # 注意：這裡我們「不」開放 ports 給外部，因為它被 Nginx 擋在後面保護著
-    
-    # 把主機的 static 對應到容器內的 static
-    volumes:
-      - ./static:/app/static
 
   # 第二個服務：Nginx 代理伺服器
   nginx:
