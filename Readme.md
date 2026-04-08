@@ -76,8 +76,17 @@ erDiagram
 | POST   | `/api/orders` | Create a new order and initialize payment | JWT Required |
 
 ## Screenshots
+* **Homepage**
+<img width="1139" height="986" alt="Screenshot 2026-04-08 at 8 19 24 PM" src="https://github.com/user-attachments/assets/97ad6746-ec41-49a4-9aa8-d3a363b2346c" />
+<hr>
 
+* **History Order page**
+<img width="1098" height="654" alt="Screenshot 2026-04-08 at 8 18 54 PM" src="https://github.com/user-attachments/assets/d07b493f-ce70-4074-b57b-c628a8eb0c82" />
+<hr>
 
+* **Booking page**
+<img width="1896" height="989" alt="Screenshot 2026-04-08 at 8 17 35 PM" src="https://github.com/user-attachments/assets/214e3195-ea36-4dd7-8cb8-25e40560e090" />
+<hr>
 
  test account
 
