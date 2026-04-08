@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS `travel`
+CREATE DATABASE IF NOT EXISTS `taipei-day-tour`
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
 
-USE `travel`;
+USE `taipei-day-tour`;
 
 CREATE TABLE IF NOT EXISTS `spot`(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
